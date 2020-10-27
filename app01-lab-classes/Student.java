@@ -5,16 +5,16 @@ import java.util.*;
  * It holds the student details such as name, id and credits
  * 
  * @author Michael Kölling and David Barnes
- * @version 2016.02.29
+ * @version 27.10.2020
  * 
- * Modified by Derek
+ * Modified by Timothy Arole
  */
 public class Student
 {
     // Attributes, Fields, Variables
-    
+    // This is where the the students name is stored
     private String name;
-
+    //This is where the students id will be stored
     private String id;
     
     // A BSc course has 120 credits, each module has 15 Credits
