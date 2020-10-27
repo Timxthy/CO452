@@ -1,0 +1,27 @@
+LabClass co452lab = new LabClass(3);
+Student lebron = new Student("Lebron James", "12345");
+Student curry = new Student("Steph Curry", "12346");
+Student Beard = new Student("James  Harden", "12347");
+co452lab.enrollStudent(lebron);
+co452lab.enrollStudent(curry);
+Student beard = new Student("james Harden", "12347");
+co452lab.enrollStudent(beard);
+co452lab.numberOfStudents()
+    returned int 3
+co452lab.printList();
+Lab class unknown
+Instructor: unknown   Room: unknown
+Class list:
+Lebron James, student ID: 12345, credits: 0
+Steph Curry, student ID: 12346, credits: 0
+james Harden, student ID: 12347, credits: 0
+Number of students: 3
+co452lab.setInstructor("Nicholas Day");
+co452lab.setRoom("G100");
+co452lab.setTime("Tuesday 29th September 2020");
+lebron.addCredits(20);
+curry.addCredits(20);
+beard.addCredits(20);
+lebron.changeName("LeBelt James");
+curry.changeName("Stephen Curry");
+beard.changeName("James the Beard Harden");
