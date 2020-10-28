@@ -1,0 +1,10 @@
+LabClass labClass1 = new LabClass(3);
+Student lebron = new Student("Lebron James", "12345");
+Student Steph = new Student("Steph Curry", "12346");
+Student Wesbrick = new Student("Russel Westbrook", "12347");
+Course comp = new Course("g400", "Computing");
+Course comp = new Course("G400", "Computing");
+comp.getcode()
+    returned String "G400"
+comp.getname()
+    returned String "Computing"

@@ -16,9 +16,11 @@ public class Student
     private String name;
     //This is where the students id will be stored
     private String id;
-    
     // A BSc course has 120 credits, each module has 15 Credits
     private int credits;
+    //The students course code and title 
+    private Course course;
+    
 
     /**
      * Create a new student with a given name and ID number.
@@ -28,6 +30,7 @@ public class Student
         name = fullName;
         id = studentID;
         credits = 0;
+        
     }
     
     /**
@@ -80,6 +83,15 @@ public class Student
     {
         return name.substring(0,4) + id.substring(0,3);
     }
+    
+    /**
+     * Adds the students course
+     */
+    public void addCourse(Course newCourse)
+    {
+        course = newCourse;
+    }
+    
     
     /**
      * Print the student's name and ID number to the output terminal.
