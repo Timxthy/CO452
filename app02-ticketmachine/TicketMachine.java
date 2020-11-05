@@ -17,7 +17,7 @@ public class TicketMachine
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
-
+    // This is the price of the ticket.
     private int price;
     
     /**
