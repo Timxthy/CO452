@@ -9,7 +9,7 @@ import java.util.Date;
 public class Ticket
 {
    // Journey Destination  
-   private Stirng destination;
+   private String destination;
    
    // This is the ticket price in pence
    private int price;
@@ -21,9 +21,32 @@ public class Ticket
     /**
      * Constructor for objects of class Ticket
      */
-    public Ticket(String destination, int price)
+   public Ticket(String destination, int price)
+    
     {
-
+        timeStamp = new Date();
+        this.destination = destination;
+        this.price = price;
     }
+    
+    /**
+     * Return the tickets destination as a String
+     */
+   public String getDestination(String newDestination)
+    {
+      return destination;  
+    }
+    
+     /**
+     * 
+     */
+    public void print()
+   
+    {
+        System.out.print( " Ticket to " + destination); 
+        System.out.print(" Cost " + price + "p ");
+        System.out.println("Issued on:" + timeStamp);
+    }
+    
     
 }
