@@ -2,15 +2,15 @@
 /**
  * Enumeration class coin - write a description of the enum class here
  *
- * @author (your name here)
- * @version (version number or date here)
+ * @author Timothy Arole
+ * @version 2020.11.05
  */
 public enum coin
 {
-    P10 (10),
-    P20 (20),
-    P100 (100),
-    P200 (200);
+    P10(10),
+    P20(20),
+    P100(100),
+    P200(200);
     
     private final int value;
     
