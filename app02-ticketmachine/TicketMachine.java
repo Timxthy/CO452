@@ -6,10 +6,10 @@
  * sensible amounts of money, and will only print a ticket
  * if enough money has been input.
  * 
- * @author David J. Barnes and Michael Kölling
- * @version 2016.02.29
+ * @author Timothy Arole
+ * @version 2020.11.05
  * 
- * Modified by Student Name
+ * Modified by Timothy Arole
  */
 public class TicketMachine
 {
@@ -19,6 +19,11 @@ public class TicketMachine
     private int total;
     
     private Ticket aylesburyTicket;
+    
+    private Ticket amershamTicket;
+    
+    private Ticket wycombeTicket;
+    
     
     
     /**
@@ -31,6 +36,8 @@ public class TicketMachine
         
         
         aylesburyTicket = new Ticket("Alyesbury", 220);
+        amershamTicket = new Ticket("Amersham", 300);
+        wycombeTicket = new Ticket("High Wycombe", 330);
     }
 
 
@@ -63,18 +70,31 @@ public class TicketMachine
     public void insert10p()
     {
         balance = balance + 10;
+        printBalance(10);
     }
+    
     public void insert20p()
     {
         balance = balance + 20;
+        printBalance(20);
     }
+    
     public void insert100p()
     {
         balance = balance + 100;
+        printBalance(100);
     }
+    
     public void insert200p()
     {
         balance = balance + 200;
+        printBalance(200);
+    }
+    
+    public void printBalance(int amount)
+    {
+      System.out.println("you have inserted " + amount ); 
+      System.out.println("current balance = " + balance );
     }
     
     /**
