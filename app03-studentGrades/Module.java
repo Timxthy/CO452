@@ -14,6 +14,7 @@ public class Module
     
     private int mark;
     
+    private boolean completed;
    
     /**
      * Constructor for objects of class Module
@@ -23,13 +24,15 @@ public class Module
        mark = 0; 
        this.title = title;
        this.codeNo = codeNo;
+       completed = false;
     }
 
     public void awardMark(int mark)
     {
         if((mark >= 0) && (mark <= 100))
     {
-        this.mark = mark;
+         this.mark = mark;
+        if(mark >=40)completed = true;
     }
     else
     {

@@ -7,7 +7,7 @@ import java.util.*;
  * @author Timothy Arole
  * @version 2020.11.07
  */
-public class Student
+public class Student 
 {
     // the student's full name
     private String name;
