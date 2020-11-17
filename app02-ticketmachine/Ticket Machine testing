@@ -1,0 +1,51 @@
+TicketMachine ticketMa1 = new TicketMachine();
+Ticket ticket1 = new Ticket("Alyesbury", 220);
+Ticket ticket2 = new Ticket("Amersham", 300);
+Ticket ticket3 = new Ticket("High Wycombe", 330);
+ticketMa1.printTicket();
+You must insert at least: 220 more cents.
+ticketMa1.insert100p();
+you have inserted 100
+current balance = 100
+ticketMa1.insert100p();
+you have inserted 100
+current balance = 200
+ticketMa1.insert20p();
+you have inserted 20
+current balance = 220
+ticketMa1.printTicket();
+##################
+# The BlueJ Line
+# Ticket
+# 220 cents.
+##################
+
+ticketMa1.refundBalance()
+    returned int 0
+ticketMa1.insert200p();
+you have inserted 200
+current balance = 200
+ticketMa1.refundBalance()
+    returned int 200
+ticketMa1.getBalance()
+    returned int 0
+ticketMa1.insert100p();
+you have inserted 100
+current balance = 100
+ticketMa1.getBalance()
+    returned int 100
+ticket2.getDestination("High Wycombe")
+    returned String "Amersham"
+ticket2.print();
+ Ticket to Amersham Cost 300p Issued on:Tue Nov 17 10:04:53 GMT 2020
+ticket3.print();
+ Ticket to High Wycombe Cost 330p Issued on:Tue Nov 17 10:05:16 GMT 2020
+ticket1.print();
+ Ticket to Alyesbury Cost 220p Issued on:Tue Nov 17 10:04:07 GMT 2020
+ticketMa1.printTicket();
+You must insert at least: 120 more cents.
+ticketMa1.printBalance(500);
+you have inserted 500
+current balance = 100
+ticketMa1.printTicket();
+You must insert at least: 120 more cents.

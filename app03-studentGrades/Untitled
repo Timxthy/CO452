@@ -1,0 +1,13 @@
+course1.createdModules();
+course1.print();
+Course I300 - Software Engineering
+course1.createdModules();
+Course course1 = new Course("I300", "Software Engineering");
+course1.createdModules();
+course1.print();
+Course I300 - Software Engineering
+Gradenull
+Module: CO452  Programming Concepts Mark = 0
+Module: CO450  Computer Architectures Mark = 0
+Module: CO454  Digital Tech Mark = 0
+Module: CO456  Web Dev Mark = 0
