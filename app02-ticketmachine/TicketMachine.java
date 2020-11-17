@@ -17,14 +17,14 @@ public class TicketMachine
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
-    
+    // Alyesbury ticket
     private Ticket aylesburyTicket;
-    
+    // amersham ticket
     private Ticket amershamTicket;
-    
+    // High wycombe ticket 
     private Ticket wycombeTicket;
     
-    
+    private Coin coin; 
     
     /**
      * Create a machine that issues tickets of the given price.

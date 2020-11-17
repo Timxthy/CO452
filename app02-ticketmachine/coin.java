@@ -1,11 +1,11 @@
 
 /**
- * Enumeration class coin - write a description of the enum class here
+ * Enumeration class Coin - write a description of the enum class here
  *
- * @author Timothy Arole
- * @version 2020.11.05
+ * @author (your name here)
+ * @version (version number or date here)
  */
-public enum coin
+public enum Coin
 {
     P10(10),
     P20(20),
@@ -14,7 +14,7 @@ public enum coin
     
     private final int value;
     
-    private coin(int value)
+    private Coin(int value)
     {
         this.value = value;
     }
