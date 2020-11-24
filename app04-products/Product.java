@@ -1,3 +1,4 @@
+
 /**
  * Model some details of a product sold by a company.
  * 
@@ -12,7 +13,8 @@ public class Product
     private String name;
     // The quantity of this product in stock.
     private int quantity;
-
+    
+   
     /**
      * Constructor for objects of class Product.
      * The initial stock quantity is zero.
@@ -39,6 +41,13 @@ public class Product
      */
     public String getName()
     {
+        return name;
+    }
+    
+    //ATTEMPT
+    public String renameProduct(String name)
+    {
+        this.name = new String(name);
         return name;
     }
 
@@ -77,6 +86,19 @@ public class Product
         }
     }
 
+    //do we have to return a balance after sale? 
+    public void sellProduct(int amount)
+    {
+        if(amount > 0)
+        {
+            quantity -= amount;
+        }
+        else
+        {
+            System.out.println("Attempt to sell" + name + 
+                               " with insufficent stock: " + amount);
+        }
+    }
     /**
      * Sell one of these products.
      * An error is reported if there appears to be no stock.
