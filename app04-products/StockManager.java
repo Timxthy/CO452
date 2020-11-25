@@ -29,6 +29,16 @@ public class StockManager
         stock.add(item);
     }
     
+    /**
+     * Removes product based on ID
+     */
+    public void removeProduct(int id)
+    {
+        Product product = findProduct(id);
+        this.stock.remove(product);
+        System.out.println("Product has been deleted");
+    }
+    
     //ATTEMPT
     /**
      * Sells quantities of stock
