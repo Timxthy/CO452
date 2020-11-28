@@ -1,0 +1,119 @@
+StockManager manager = new StockManager();
+StockDemo demo = new StockDemo(manager);
+manager.printAllProducts();
+
+Arole's Stock List
+====================
+
+101: Samsung Galaxy S20 stock level: 0
+102: Apple iPhone 12 stock level: 0
+103: Google Pixel 4A stock level: 0
+104: OnePlus 9 stock level: 0
+105: Huawei Mate X2 stock level: 0
+106: Nokia 7.3 5G stock level: 0
+107: Samsung Galaxy S21 Ultra stock level: 0
+108: Nokia 10 stock level: 0
+109: iPhone SE 2 Plus stock level: 0
+110: iPhone 13 stock level: 0
+
+demo.demoDeliverProduct();
+101: Samsung Galaxy S20 stock level: 0
+101: Samsung Galaxy S20 stock level: 5
+demo.demoDeliverProduct();
+101: Samsung Galaxy S20 stock level: 5
+101: Samsung Galaxy S20 stock level: 10
+demo.demoDeliverProduct();
+101: Samsung Galaxy S20 stock level: 10
+101: Samsung Galaxy S20 stock level: 15
+demo.demoSellProduct(5);
+Product with ID: 5 is not recognised.
+demo.demoSellProduct(101);
+101: Samsung Galaxy S20 stock level: 15
+101: Samsung Galaxy S20 stock level: 14
+demo.getProduct(101)
+    returned Object <object reference>
+manager.delivery(105, 50);
+manager.printAllProducts();
+
+Arole's Stock List
+====================
+
+101: Samsung Galaxy S20 stock level: 14
+102: Apple iPhone 12 stock level: 0
+103: Google Pixel 4A stock level: 0
+104: OnePlus 9 stock level: 0
+105: Huawei Mate X2 stock level: 50
+106: Nokia 7.3 5G stock level: 0
+107: Samsung Galaxy S21 Ultra stock level: 0
+108: Nokia 10 stock level: 0
+109: iPhone SE 2 Plus stock level: 0
+110: iPhone 13 stock level: 0
+
+manager.numberInStock(105)
+    returned int 0
+manager.findProduct(111)
+    returned Object null
+manager.findProduct(105)
+    returned Object <object reference>
+manager.findProduct(105)
+    returned Object <object reference>
+manager.printLowStock();
+102Apple iPhone 120
+103Google Pixel 4A0
+104OnePlus 90
+106Nokia 7.3 5G0
+107Samsung Galaxy S21 Ultra0
+108Nokia 100
+109iPhone SE 2 Plus0
+110iPhone 130
+manager.removeProduct(105);
+Product has been deleted
+manager.printAllProducts();
+
+Arole's Stock List
+====================
+
+101: Samsung Galaxy S20 stock level: 14
+102: Apple iPhone 12 stock level: 0
+103: Google Pixel 4A stock level: 0
+104: OnePlus 9 stock level: 0
+106: Nokia 7.3 5G stock level: 0
+107: Samsung Galaxy S21 Ultra stock level: 0
+108: Nokia 10 stock level: 0
+109: iPhone SE 2 Plus stock level: 0
+110: iPhone 13 stock level: 0
+
+manager.renameProduct(101, "iPhone 3G");
+manager.printAllProducts();
+
+Arole's Stock List
+====================
+
+101: iPhone 3G stock level: 14
+102: Apple iPhone 12 stock level: 0
+103: Google Pixel 4A stock level: 0
+104: OnePlus 9 stock level: 0
+106: Nokia 7.3 5G stock level: 0
+107: Samsung Galaxy S21 Ultra stock level: 0
+108: Nokia 10 stock level: 0
+109: iPhone SE 2 Plus stock level: 0
+110: iPhone 13 stock level: 0
+
+manager.sellProduct(101, 5)
+Item has been sold!    returned int 5
+
+manager.printAllProducts();
+
+Arole's Stock List
+====================
+
+101: iPhone 3G stock level: 9
+102: Apple iPhone 12 stock level: 0
+103: Google Pixel 4A stock level: 0
+104: OnePlus 9 stock level: 0
+106: Nokia 7.3 5G stock level: 0
+107: Samsung Galaxy S21 Ultra stock level: 0
+108: Nokia 10 stock level: 0
+109: iPhone SE 2 Plus stock level: 0
+110: iPhone 13 stock level: 0
+

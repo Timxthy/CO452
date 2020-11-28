@@ -45,10 +45,10 @@ public class Product
     }
     
     //ATTEMPT
-    public String renameProduct(String name)
+    public void renameProduct(String name)
     {
-        this.name = new String(name);
-        return name;
+        this.name = name;
+        
     }
 
     /**
@@ -87,6 +87,9 @@ public class Product
     }
 
     //do we have to return a balance after sale? 
+    /**
+     * Sells products from the stock list
+     */
     public void sellProduct(int amount)
     {
         if(amount > 0)
@@ -99,6 +102,7 @@ public class Product
                                " with insufficent stock: " + amount);
         }
     }
+    
     /**
      * Sell one of these products.
      * An error is reported if there appears to be no stock.
@@ -114,5 +118,14 @@ public class Product
             System.out.println(
                 "Attempt to sell an out of stock item: " + name);
         }
+    }
+    
+    /**
+     * Prints ID, name and quantity
+     */
+    public void print()
+    {
+        System.out.println(id + name + quantity);
+       
     }
 }

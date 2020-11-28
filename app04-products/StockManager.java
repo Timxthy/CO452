@@ -28,7 +28,7 @@ public class StockManager
     {
         stock.add(item);
     }
-    
+
     /**
      * Removes product based on ID
      */
@@ -38,18 +38,19 @@ public class StockManager
         this.stock.remove(product);
         System.out.println("Product has been deleted");
     }
-    
+
     //ATTEMPT
     /**
      * Sells quantities of stock
      */
-    public int sellProduct(int id, int amount,int getQuantity)
+    public int sellProduct(int id, int amount)
     {
         Product product = findProduct(id);
         product.sellProduct(amount);
+        System.out.println( "Item has been sold!");
         return amount;
     }
-    
+
     /**
      * Receive a delivery of a particular product.
      * Increase the quantity of the product by the given amount.
@@ -61,9 +62,10 @@ public class StockManager
         Product product = findProduct(id);
         product.increaseQuantity(amount);
     }
-    
-    
-    //edit**********
+
+    /**
+     * Renames inputted product
+     */
     public void renameProduct(int id,String name)
     {
         Product product = findProduct(id);
@@ -77,6 +79,7 @@ public class StockManager
      */
     public Product findProduct(int id)
     {
+
         for(Product product : stock)
         {
             if(product.getID() == id)
@@ -113,6 +116,26 @@ public class StockManager
         {
             System.out.println(product.toString());
         }
+        else
+        {
+            System.out.println("This ID could not be found!");
+        }
+    }
+
+    /**
+     * Prints stock that are low on units
+     */
+    public void printLowStock()
+    {
+        for(Product product : stock)
+        {
+            if(product.getQuantity() <= 5)
+            {
+                product.print();
+            }
+        }
+
+        
     }
 
     /**
