@@ -90,7 +90,24 @@ public class StockManager
 
         return null;
     }
+    
+    /**
+     * Checks for duplicate IDs
+     */
+    public boolean isDuplicateID(int id)
+    {
 
+        for(Product product : stock)
+        {
+            if(product.getID() == id)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+    
     /**
      * Locate a product with the given ID, and return how
      * many of this item are in stock. If the ID does not

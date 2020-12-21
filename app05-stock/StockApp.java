@@ -10,14 +10,14 @@
 public class StockApp
 {
     public final int FIRST_ID = 200;
-    
+
     // Use to get user input - reads input from the user
     private InputReader input;
-    
+
     private StockManager manager;
-    
+
     private StockDemo demo;
-    
+
     private int nextID = FIRST_ID;
 
     /**
@@ -44,15 +44,14 @@ public class StockApp
 
             String choice = input.getInput();
             choice = choice.toLowerCase();
-            
+
             executeMenuChoice(choice);
-            
 
             if(choice.equals("quit"))
                 finished = true;
         }
     }
-    
+
     /**
      * 
      */
@@ -60,15 +59,15 @@ public class StockApp
     {
         if(choice.equals("add"))
         {
-           addProduct();
+            addProduct();
         }
         else if(choice.equals("remove"))
         {
-           removeProduct();
+            removeProduct();
         }
         else if(choice.equals("printAll"))
         {
-           printAllProducts();
+            printAllProducts();
         }
     }
 
@@ -76,16 +75,35 @@ public class StockApp
     {
         System.out.println("Add a new Product");
         System.out.println();
-        
+
         System.out.println("Please enter name of the product");
         String name = input.getInput();
+
+        boolean isDuplicate = manager.isDuplicateID(nextID);
         
-        Product product = new Product(nextID, name);
-        manager.addProduct(product);
-        
-        System.out.println("You have added " + product + " to the Stock list!");
+        if(isDuplicate)
+        {
+            boolean finished = false;
+            
+            while(!finished)
+            {
+                nextID++;
+                if(!manager.isDuplicateID(nextID))
+                {
+                    finished = true;
+                }
+            }
+        }
+        else
+        {
+            Product product = new Product(nextID, name);
+            manager.addProduct(product);
+
+            System.out.println("You have added " + product + " to the Stock list!");
+        }
+
     }
-    
+
     /**
      * 
      */
@@ -93,15 +111,14 @@ public class StockApp
     {
         System.out.println("Remove a Product from the Stock list");
         System.out.println();
-        
+
         System.out.println("Please enter ID of the product ");
         String number = input.getInput();
-        
+
         int id = Integer.parseInt(number);
         manager.removeProduct(id);
     }
-    
-    
+
     /**
      * Print out a menu of operation choices
      */
@@ -114,13 +131,13 @@ public class StockApp
         System.out.println("    Quit:       Quit the program");
         System.out.println();        
     }
-    
+
     /**
      * 
      */
     public void printAllProducts()
     {
-       manager.printAllProducts(); 
+        manager.printAllProducts(); 
     }
 
     /**
