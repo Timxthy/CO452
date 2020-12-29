@@ -35,8 +35,21 @@ public class StockManager
     public void removeProduct(int id)
     {
         Product product = findProduct(id);
-        this.stock.remove(product);
-        System.out.println("Product has been deleted");
+
+        if(product !=null)
+        {
+            stock.remove(product);
+            System.out.println("Remove Product " + id);
+
+        }
+        else
+        {
+
+            this.stock.remove(product);
+            System.out.println("Product has been deleted");
+
+        }  
+
     }
 
     //ATTEMPT
@@ -57,7 +70,7 @@ public class StockManager
      * @param id The ID of the product.
      * @param amount The amount to increase the quantity by.
      */
-    public void delivery(int id, int amount)
+    public void deliverProduct (int id, int amount)
     {
         Product product = findProduct(id);
         product.increaseQuantity(amount);
@@ -70,6 +83,20 @@ public class StockManager
     {
         Product product = findProduct(id);
         product.renameProduct(name);
+    }
+    
+    /**
+     * Finds product in stock using part of its name 
+     */
+    public void searchProduct(String name)
+    {
+        for(Product product : stock)
+        {
+            if(product.getName().contains(name))
+            {
+                System.out.println(product);
+            }
+        }
     }
 
     /**
@@ -90,7 +117,7 @@ public class StockManager
 
         return null;
     }
-    
+
     /**
      * Checks for duplicate IDs
      */
@@ -107,7 +134,7 @@ public class StockManager
 
         return false;
     }
-    
+
     /**
      * Locate a product with the given ID, and return how
      * many of this item are in stock. If the ID does not
@@ -153,8 +180,7 @@ public class StockManager
         }
 
     }
-    
-    
+
     /**
      * Print out each product in the stock
      * in the order they are in the stock list
@@ -179,4 +205,4 @@ public class StockManager
         System.out.println();
     }
 }
-    
+ 

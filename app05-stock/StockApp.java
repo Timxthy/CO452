@@ -31,7 +31,7 @@ public class StockApp
     }
 
     /**
-     * NB
+     * Starts the program
      */
     public void run()
     {
@@ -53,7 +53,7 @@ public class StockApp
     }
 
     /**
-     * 
+     * Excutes Menu Choice
      */
     public void executeMenuChoice(String choice)
     {
@@ -70,7 +70,11 @@ public class StockApp
             printAllProducts();
         }
     }
-
+    
+    /**
+     * Adds to specified product to the stock list
+     */
+  
     public void addProduct()
     {
         System.out.println("Add a new Product");
@@ -105,7 +109,7 @@ public class StockApp
     }
 
     /**
-     * 
+     * Removes specified product from the stock list
      */
     public void removeProduct()
     {
@@ -118,7 +122,75 @@ public class StockApp
         int id = Integer.parseInt(number);
         manager.removeProduct(id);
     }
-
+    
+    /**
+     * 
+     */
+    public void renameProduct()
+    {
+        System.out.println("Renaming a product");
+        System.out.println();
+        
+        System.out.println("Please enter ID of the product ");
+        String number = input.getInput();
+        int id = Integer.parseInt(number);
+        
+        System.out.println("Please enter the new name");
+        String name = input.getInput();
+        
+        manager.renameProduct(id, name);
+    }
+    
+    /**
+     * Sells specified product in the stock list
+     */
+    public void sellProduct()
+    {
+        System.out.println("Selling Product");
+        System.out.println();
+        
+        System.out.println("Please enter ID of the product ");
+        String number = input.getInput();
+        int id = Integer.parseInt(number);
+        
+        System.out.println("Please enter an Amount ");
+        number = input.getInput();
+        int amount = Integer.parseInt(number);
+        
+        manager.sellProduct(id, amount);
+        
+        
+        
+    }
+    
+    /**
+     * Delivers specified product 
+     */
+    public void deliverProduct()
+    {
+        System.out.println("Taking deliver of products");
+        System.out.println();
+        
+        System.out.println("Please enter ID of the product ");
+        String number = input.getInput();
+        int id = Integer.parseInt(number);
+        
+        System.out.println("Please enter an Amount ");
+        number = input.getInput();
+        int amount = Integer.parseInt(number);
+        
+        manager.deliverProduct(id, amount);
+        
+    }
+    
+    /**
+     * 
+     */
+    public void restockAllProducts()
+    {
+        
+    }
+    
     /**
      * Print out a menu of operation choices
      */
@@ -127,6 +199,9 @@ public class StockApp
         System.out.println();
         System.out.println("    Add:        Add a new product");
         System.out.println("    Remove:     Remove an old product");
+        System.out.println("    Sell:       Sell a product from the stock list");
+        System.out.println("    Deliver:    Deliver a product to the stock list");
+        System.out.println("    ");
         System.out.println("    PrintAll:   Print all products");
         System.out.println("    Quit:       Quit the program");
         System.out.println();        
