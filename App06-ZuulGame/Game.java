@@ -21,18 +21,22 @@
 
 public class Game 
 {
+
     private final Map map;
     private final Parser parser;
     private Room currentRoom;
+    private Player player;
         
     /**
      * Create the game and initialise its internal map.
      */
     public Game() 
     {
+
         map = new Map();
         currentRoom = map.getStartRoom();
         parser = new Parser();
+        player = new Player("Timothy");
         play();
     }
 
