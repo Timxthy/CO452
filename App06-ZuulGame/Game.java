@@ -17,10 +17,12 @@
  * Modified and extended by Your name
  */
 
+
+
 public class Game 
 {
-    private Map map;
-    private Parser parser;
+    private final Map map;
+    private final Parser parser;
     private Room currentRoom;
         
     /**
@@ -31,6 +33,7 @@ public class Game
         map = new Map();
         currentRoom = map.getStartRoom();
         parser = new Parser();
+        play();
     }
 
 
