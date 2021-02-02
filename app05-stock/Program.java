@@ -18,5 +18,6 @@ public class Program
     {
         app = new StockApp();
         app.run();
+
     }
 }

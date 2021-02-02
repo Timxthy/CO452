@@ -65,10 +65,16 @@ public class StockApp
         {
             removeProduct();
         }
-        else if(choice.equals("printAll"))
-        {
-            printAllProducts();
+        else if(choice.equals("printall"))
+        {   printAllProducts();
+            
         }
+        else if
+        
+        else if 
+        
+        else if
+        
     }
     
     /**
@@ -213,6 +219,7 @@ public class StockApp
     public void printAllProducts()
     {
         manager.printAllProducts(); 
+        
     }
 
     /**

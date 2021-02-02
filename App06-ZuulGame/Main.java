@@ -7,7 +7,6 @@ public class Main {
     /**
      * @param args
      */
-    public static void main(String[] args) {
-        zuul = new Game();
+    public static void main(String[] args) { zuul = new Game();
     }
 }

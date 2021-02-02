@@ -25,7 +25,7 @@ public class Map
 
         // create the rooms
 
-        createOutsideRoom();
+
 
         createTheaterRoom();
 
@@ -37,6 +37,9 @@ public class Map
 
         createBasketballCourt();
 
+        createOutsideRoom();
+
+
 
         startRoom = outside;  // start game outside
     }
@@ -45,7 +48,7 @@ public class Map
     {
         basketballCourt = new Room("Concrete Basketball court - Careful don't lose ya ankles! ;)");
 
-        basketballCourt.setExit("South", outside);
+        basketballCourt.setExit("south", outside);
     }
 
 
@@ -81,7 +84,7 @@ public class Map
         outside.setExit("east", theater);
         outside.setExit("south", lab);
         outside.setExit("west", pub);
-        outside.setExit("North", basketballCourt);
+        outside.setExit("north", basketballCourt);
     }
 
     public Room getStartRoom()
